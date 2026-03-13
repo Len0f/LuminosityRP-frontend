@@ -1,7 +1,12 @@
-import Home from '../components/Home';
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-function Index() {
-  return <Home />;
+export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/reglement");
+  }, []);
+
+  return null;
 }
-
-export default Index;
