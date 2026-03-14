@@ -155,7 +155,7 @@
 }
 
 .cardBodyOpen {
-  max-height: 5000px;
+  max-height: none;
 }
 
 .cardBody p {
