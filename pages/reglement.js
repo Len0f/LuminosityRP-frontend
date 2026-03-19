@@ -67,23 +67,23 @@ export default function Reglement() {
         <p className={styles.title}>Règlement</p>
       </header>
 
-      <nav className={styles.nav}>
-        <button
-          className={`${styles.navBtn} ${activeTab === "annonces" ? styles.active : ""}`}
-          onClick={() => setActiveTab("annonces")}
-        >
-          📢 Annonces
-        </button>
-        {tabs.map((tab) => (
-          <button
-            key={tab.key}
-            className={`${styles.navBtn} ${activeTab === tab.key ? styles.active : ""}`}
-            onClick={() => setActiveTab(tab.key)}
-          >
-            {tab.emoji} {tab.label}
-          </button>
-        ))}
-      </nav>
+<nav className={styles.nav}>
+  {tabs.map((tab) => (
+    <button
+      key={tab.key}
+      className={`${styles.navBtn} ${activeTab === tab.key ? styles.active : ""}`}
+      onClick={() => setActiveTab(tab.key)}
+    >
+      {tab.emoji} {tab.label}
+    </button>
+  ))}
+  <button
+    className={`${styles.navBtn} ${activeTab === "annonces" ? styles.active : ""}`}
+    onClick={() => setActiveTab("annonces")}
+  >
+    📢 Annonces
+  </button>
+</nav>
 
       <main className={styles.main}>
         {activeTab === "annonces" ? (
