@@ -34,6 +34,7 @@ export default function Reglement() {
       </header>
 
       <nav className={styles.nav}>
+     <a href="/annonces" className={styles.navBtn}>📢 Annonces</a>
         {tabs.map((tab) => (
           <button
             key={tab.key}
